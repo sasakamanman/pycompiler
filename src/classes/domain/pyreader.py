@@ -23,7 +23,14 @@ class PyReader:
             if not self._compiler.search(line): continue
             splited_line = line.split(' ')[1].replace('\n', '')
             package_list.append(splited_line)
-
+        '''
+        for package in package_list:
+            package_path = self._py_path.parent / pathlib.Path(package)
+            if not package_path.exists(): continue
+            sub_reader = PyReader(package_path)
+            package_list_from_sub = sub_reader.extracct_packages()
+            package_list += package_list_from_sub
+        '''
         return package_list
 
 
