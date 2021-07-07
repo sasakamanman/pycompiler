@@ -1,0 +1,18 @@
+@startuml PyCompiler
+class SelectFile{
+
+}
+
+class TreeShaker{
+
+}
+
+class makeSpec{
+
+}
+
+class pyinstaller{
+    
+}
+
+@enduml
