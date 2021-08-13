@@ -1,17 +1,7 @@
-import ast
-
-input_item = '''
 import os
-from src import line_parser
+import pprint
+import sys
+import ast
+from tkinter.ttk import Treeview
 
-class A:
-    import pathlib
-    def a(self):
-        print('test')
-
-a = A()
-a.a()
-'''
-
-ast_obj = ast.parse(input_item)
-print(ast.dump(ast_obj))
+pprint.pprint(sys.path)
